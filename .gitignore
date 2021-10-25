@@ -1,0 +1,68 @@
+######################
+# gitignore Xcode 6
+# Created by  ThinhPhan
+# Version: 1.1
+# Created date: 2014-08-09
+# Modified date: 2014-11-19
+#######################
+
+### Objective-C ###
+# Xcode
+#
+
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+*.perspectivev3
+!default.perspectivev3
+!default.mode2v3
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+ 
+####
+# Xcode 5 -  Source Control files
+#
+
+*.xccheckout
+*.moved-aside
+
+####
+# Xcode build files -
+
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+.idea/
+build/
+profile
+
+# Generated files
+*.o
+*.pyc
+*.hi
+
+# Backup files
+*~.nib
+
+#####
+# OS X temporary files that should never be committed
+
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+*.swp
+._*
+
+######################
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
+#
+# Pods/
