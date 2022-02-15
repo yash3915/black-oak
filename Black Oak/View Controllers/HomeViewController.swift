@@ -12,13 +12,22 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var homeTableView:UITableView!
 
     var menus = [Menu(name: "Sofa", image: "Sofa", id: "sofa")]
-    var tableSections: [Section] = [Section(type: "menu", id: "menu_id", items: 1), Section(type: "section", id: "category_item_id", items: 10)]
+    var tableSections = [Section]()
+    
+    
+    var products = [Product]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getProducts()
+        tableSections = [Section(type: "menu", id: "menu_id", items: 1), Section(type: "section", id: "category_item_id", items: products.count)]
         // Do any additional setup after loading the view.
     }
+    
+    func getProducts(){
+        products = Product.getList()
+    }
+
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return tableSections.count
@@ -43,7 +52,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             (cell as! MenuItemsCell).item1Lbl.text = "Sofa"
             (cell as! MenuItemsCell).item1ImgView.image = UIImage(named: "Sofa")
         }else{
-            cell.textLabel?.text = tableSections[indexPath.section].type + " : " + String(indexPath.row)
+            cell.textLabel?.text = products[indexPath.row].name
         }
         return cell
     }

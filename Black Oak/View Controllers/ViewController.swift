@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var SignUpButton: UIButton!
     
+    var products = [Product]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -21,6 +23,10 @@ class ViewController: UIViewController {
         SignUpButton.layer.cornerRadius = 6
     }
 
+    
+    func getProducts(){
+        products = Product.getList()
+    }
 
 }
 
