@@ -7,14 +7,50 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var homeTableView:UITableView!
+
+    var menus = [Menu(name: "Sofa", image: "Sofa", id: "sofa")]
+    var tableSections: [Section] = [Section(type: "menu", id: "menu_id", items: 1), Section(type: "section", id: "category_item_id", items: 10)]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return tableSections.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableSections[section].items
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.white
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return tableSections[section].type
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: tableSections[indexPath.section].id, for: indexPath)
+        if(tableSections[indexPath.section].type == "menu") {
+            (cell as! MenuItemsCell).item1Lbl.text = "Sofa"
+            (cell as! MenuItemsCell).item1ImgView.image = UIImage(named: "Sofa")
+        }else{
+            cell.textLabel?.text = tableSections[indexPath.section].type + " : " + String(indexPath.row)
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableSections[indexPath.section].type == "menu" ? 120 : 30
+    }
 
     /*
     // MARK: - Navigation
