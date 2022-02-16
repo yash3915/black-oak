@@ -212,24 +212,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Best" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUA-XY-9d7">
+<<<<<<< Updated upstream
                                 <rect key="frame" x="44" y="70" width="190" height="27.5"/>
+=======
+                                <rect key="frame" x="44" y="129" width="190" height="27.5"/>
+>>>>>>> Stashed changes
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Furniture!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPV-Rr-JMi">
+<<<<<<< Updated upstream
                                 <rect key="frame" x="44" y="100.5" width="106" height="27.5"/>
+=======
+                                <rect key="frame" x="44" y="159.5" width="106" height="27.5"/>
+>>>>>>> Stashed changes
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="     Search Furniture ?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MnU-Fv-9hl">
+<<<<<<< Updated upstream
                                 <rect key="frame" x="30" y="158" width="354" height="34"/>
+=======
+                                <rect key="frame" x="30" y="217" width="354" height="34"/>
+>>>>>>> Stashed changes
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9f5-tO-Jaf">
+<<<<<<< Updated upstream
                                 <rect key="frame" x="15" y="207" width="384" height="591"/>
+=======
+                                <rect key="frame" x="15" y="266" width="384" height="532"/>
+>>>>>>> Stashed changes
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menu_id" rowHeight="228" id="uYb-hf-4eQ" userLabel="Menu Cell" customClass="MenuItemsCell" customModule="Black_Oak" customModuleProvider="target">
@@ -419,7 +435,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1WZ-Ve-8DT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< Updated upstream
             <point key="canvasLocation" x="5438" y="-1004"/>
+=======
+            <point key="canvasLocation" x="5546" y="-992"/>
+        </scene>
+        <!--Next Page View Controller-->
+        <scene sceneID="weW-T7-Cv6">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wsV-RK-gis" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="HGY-2I-Upp" customClass="NextPageViewController" customModule="Black_Oak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cne-ea-hHD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="onk-sw-Lpk"/>
+                        <color key="backgroundColor" red="0.1843137443" green="0.2823529541" blue="0.36470589040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HQH-ds-B8v"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3097" y="70"/>
+>>>>>>> Stashed changes
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ISU-NA-JSn">
@@ -429,6 +465,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3KY-Vt-6ap">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+<<<<<<< Updated upstream
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.1843137443" green="0.2823529541" blue="0.36470589040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -440,6 +477,19 @@
                         <segue destination="2ub-NK-Uvm" kind="relationship" relationship="viewControllers" id="IwY-I2-BBc"/>
                         <segue destination="3Xr-pg-eM3" kind="relationship" relationship="viewControllers" id="tvT-AG-nDh"/>
                         <segue destination="Yg8-ul-HGg" kind="relationship" relationship="viewControllers" id="zSp-vj-XcN"/>
+=======
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemOrangeColor"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="selectionIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="351-yj-6VS" kind="relationship" relationship="viewControllers" id="fTn-GU-WVG"/>
+                        <segue destination="NEh-IL-xcp" kind="relationship" relationship="viewControllers" id="956-Bp-DUd"/>
+                        <segue destination="EPh-yM-XCL" kind="relationship" relationship="viewControllers" id="lgE-HI-QWy"/>
+                        <segue destination="MQb-G5-Jbx" kind="relationship" relationship="viewControllers" id="1am-DS-4BW"/>
+>>>>>>> Stashed changes
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ic-hQ-8gi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -606,7 +656,13 @@
         <scene sceneID="Zo9-bh-UdE">
             <objects>
                 <navigationController title="Home" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnTap="YES" id="MQb-G5-Jbx" sceneMemberID="viewController">
+<<<<<<< Updated upstream
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="6Kl-aK-XQ7"/>
+=======
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="house.fill" catalog="system" id="6Kl-aK-XQ7">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+>>>>>>> Stashed changes
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tuO-Da-VXt">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -618,7 +674,11 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+<<<<<<< Updated upstream
                         <segue destination="JEl-mi-Ymy" kind="relationship" relationship="rootViewController" id="nCy-Vv-C9p"/>
+=======
+                        <segue destination="JEl-mi-Ymy" kind="relationship" relationship="rootViewController" id="zVf-yx-zkF"/>
+>>>>>>> Stashed changes
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWc-Sp-ZqC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -700,8 +760,15 @@
         <!--Profile-->
         <scene sceneID="Ha9-RW-eRn">
             <objects>
+<<<<<<< Updated upstream
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yg8-ul-HGg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="AKR-Oe-ZRz"/>
+=======
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="351-yj-6VS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Likes" selectedImage="heart.fill" catalog="system" id="5lp-WD-I3P">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+>>>>>>> Stashed changes
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="e9H-Bx-yiu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -730,6 +797,9 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
