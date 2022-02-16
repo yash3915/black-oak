@@ -24,7 +24,7 @@ struct Product {
     
     static func getList() -> [Product] {
         
-        let list = [Product(id: 1, name: "Sofa", size: ["25", "35"], colors: ["Red", "Black"], available: true, imageLink: "", category: CategoryType.Sofa), Product(id: 2, name: "Sofa", size: ["25", "35"], colors: ["Red", "Black"], available: true, imageLink: "", category: CategoryType.Sofa)]
+        let list = [Product(id: 1, name: "Sofa", size: ["25", "35"], colors: ["Red", "Black"], available: true, imageLink: "", category: CategoryType.Sofa), Product(id: 2, name: "Chair", size: ["25", "35"], colors: ["White", "Gray"], available: true, imageLink: "", category: CategoryType.Sofa),Product(id: 3, name: "Table", size: ["25", "35"], colors: ["Blue", "Black"], available: true, imageLink: "", category: CategoryType.Sofa)]
         return list;
     }
 }
