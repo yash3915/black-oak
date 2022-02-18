@@ -11,14 +11,28 @@ import Firebase
 class ProfilePageViewController: UIViewController {
 
     override func viewDidLoad() {
+       
         super.viewDidLoad()
         
-    
+        
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+        
+        gotoLoginvc()
+        
+    }
+    
+    func gotoLoginvc(){
+        DispatchQueue.main.async {
+            let loginVC = self.storyboard?.instantiateViewController(identifier: "LogInViewController") as! LogInViewController
+            UIApplication.shared.windows.first?.rootViewController = loginVC
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

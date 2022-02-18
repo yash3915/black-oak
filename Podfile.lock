@@ -468,19 +468,39 @@ PODS:
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.7.0)
+  - IQKeyboardManagerSwift (6.5.6)
   - leveldb-library (1.22.1)
+  - libwebp (1.2.1):
+    - libwebp/demux (= 1.2.1)
+    - libwebp/mux (= 1.2.1)
+    - libwebp/webp (= 1.2.1)
+  - libwebp/demux (1.2.1):
+    - libwebp/webp
+  - libwebp/mux (1.2.1):
+    - libwebp/demux
+  - libwebp/webp (1.2.1)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - PromisesObjC (2.0.0)
+  - SDWebImage/Core (4.4.8)
+  - SDWebImage/WebP (4.4.8):
+    - libwebp (< 2.0, >= 0.5)
+    - SDWebImage/Core
 
 DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - IQKeyboardManagerSwift
+  - NVActivityIndicatorView
+  - SDWebImage/WebP
 
 SPEC REPOS:
   trunk:
@@ -499,9 +519,13 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - IQKeyboardManagerSwift
     - leveldb-library
+    - libwebp
     - nanopb
+    - NVActivityIndicatorView
     - PromisesObjC
+    - SDWebImage
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -519,10 +543,14 @@ SPEC CHECKSUMS:
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
+  libwebp: 98a37e597e40bfdb4c911fc98f2c53d0b12d05fc
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
 
-PODFILE CHECKSUM: 41ee07709d0f394fcd85d7f5bcf7b00ef13aa8b2
+PODFILE CHECKSUM: bcbde23b9af2d65e657f4d6f10cc0a85c5e3662d
 
 COCOAPODS: 1.11.2

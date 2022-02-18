@@ -80,9 +80,11 @@ class LogInViewController: UIViewController {
     
     func gotoHomeScreen()
     {
+        
         DispatchQueue.main.async {
-            let homeVC = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
-            self.navigationController?.pushViewController(homeVC, animated: true)
+            let viewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeTabBarVC") as! UITabBarController
+            UIApplication.shared.windows.first?.rootViewController = viewController
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
         }
         
     }

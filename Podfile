@@ -9,6 +9,9 @@ pod 'Firebase/Auth'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 
+pod 'SDWebImage/WebP'
+pod 'IQKeyboardManagerSwift'
+pod 'NVActivityIndicatorView'
   # Pods for Black Oak
 
 end
