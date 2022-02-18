@@ -49,8 +49,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableSections[indexPath.section].id, for: indexPath)
         if(tableSections[indexPath.section].type == "menu") {
-            (cell as! MenuItemsCell).item1Lbl.text = "Sofa"
-            (cell as! MenuItemsCell).item1ImgView.image = UIImage(named: "Sofa")
+            
         }else{
             cell.textLabel?.text = products[indexPath.row].name
         }

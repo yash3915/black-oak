@@ -64,6 +64,8 @@ class SignUpViewController: UIViewController {
         let name = (nameTextField.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
         let email = (emailTextField.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text ?? ""
+        self.errorLable.alpha = 0
+
         
 //        Valid the fields
         let error = validateFields(name, email, password)
@@ -100,10 +102,12 @@ class SignUpViewController: UIViewController {
         errorLable.alpha = isShow ? 1 : 0
     }
     
-    func gotoHomeScreen(){
+    func gotoHomeScreen()
+    {
         DispatchQueue.main.async {
             let homeVC = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
             self.navigationController?.pushViewController(homeVC, animated: true)
         }
+        
     }
 }

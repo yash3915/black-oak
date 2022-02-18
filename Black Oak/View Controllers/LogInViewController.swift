@@ -18,16 +18,19 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     
     @IBOutlet weak var errorLable: UILabel!
+    
     override func viewDidLoad() {
+        
         
         logInButton.layer.cornerRadius = 6
         
         super.viewDidLoad()
         
         setUpElements()
-
+        
         // Do any additional setup after loading the view.
     }
+    
     func validateFields(_ email:String,_ password:String) -> String? {
         
         let email = (emailTextField.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -59,6 +62,8 @@ class LogInViewController: UIViewController {
         
         let email = (emailTextField.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text ?? ""
+        self.errorLable.alpha = 0
+
         
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             
@@ -73,12 +78,15 @@ class LogInViewController: UIViewController {
         
     }
     
-    func gotoHomeScreen(){
+    func gotoHomeScreen()
+    {
         DispatchQueue.main.async {
             let homeVC = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
             self.navigationController?.pushViewController(homeVC, animated: true)
         }
+        
     }
+
     
     
 }
