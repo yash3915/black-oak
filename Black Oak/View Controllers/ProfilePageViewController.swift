@@ -19,6 +19,13 @@ class ProfilePageViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
+    @IBOutlet weak var emailLable: UILabel!
+    
+    
+    
+    
     @IBAction func logOutButtonTapped(_ sender: Any) {
         
         gotoLoginvc()
@@ -26,6 +33,7 @@ class ProfilePageViewController: UIViewController {
     }
     
     func gotoLoginvc(){
+        
         DispatchQueue.main.async {
             let loginVC = self.storyboard?.instantiateViewController(identifier: "LogInViewController") as! LogInViewController
             UIApplication.shared.windows.first?.rootViewController = loginVC

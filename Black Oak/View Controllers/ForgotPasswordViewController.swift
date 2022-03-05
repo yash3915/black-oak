@@ -13,6 +13,7 @@ class ForgotPasswordViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var errorLable: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,8 +29,8 @@ class ForgotPasswordViewController: UIViewController {
     
     @IBAction func sendMailTapped(_ sender: Any)
     {
-        
-        
+        self.errorLable.alpha = 0
+
         
         let email = (emailTextField.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
         
@@ -43,7 +44,5 @@ class ForgotPasswordViewController: UIViewController {
                 self.errorLable.alpha = 1
             }
         }
-        
     }
-
 }
