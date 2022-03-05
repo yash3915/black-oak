@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b4U-U3-X0y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GZd-9D-bhb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -90,7 +91,7 @@
             <objects>
                 <viewController storyboardIdentifier="ForgotPasswordViewController" id="oJm-Rr-8QM" customClass="ForgotPasswordViewController" customModule="Black_Oak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zIy-K4-7PQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEL-Y6-anf">
@@ -531,6 +532,74 @@
             </objects>
             <point key="canvasLocation" x="3506" y="70"/>
         </scene>
+        <!--Items View Controller-->
+        <scene sceneID="bPF-Eo-nKP">
+            <objects>
+                <viewController id="GZd-9D-bhb" customClass="ItemsViewController" customModule="Black_Oak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zyn-Hd-xdZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hQc-w9-13d">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hiK-ki-jat">
+                                    <size key="itemSize" width="295" height="266"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="itemCell" id="WIH-1S-Gnd" customClass="ItemCell" customModule="Black_Oak" customModuleProvider="target">
+                                        <rect key="frame" x="59.5" y="0.0" width="295" height="266"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TXe-BL-IeO">
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="266"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder.fill.badge.minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5k0-92-ORf">
+                                                    <rect key="frame" x="0.0" y="1" width="296.5" height="263.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="5k0-92-ORf" secondAttribute="bottom" id="IeL-Qc-hPq"/>
+                                                <constraint firstItem="5k0-92-ORf" firstAttribute="leading" secondItem="TXe-BL-IeO" secondAttribute="leading" id="UWc-V3-YeS"/>
+                                                <constraint firstAttribute="trailing" secondItem="5k0-92-ORf" secondAttribute="trailing" id="fLw-WN-xtV"/>
+                                                <constraint firstItem="5k0-92-ORf" firstAttribute="top" secondItem="TXe-BL-IeO" secondAttribute="top" id="n2D-xs-Ue6"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <size key="customSize" width="295" height="266"/>
+                                        <connections>
+                                            <outlet property="imgView" destination="5k0-92-ORf" id="wIM-ec-0Gb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="GZd-9D-bhb" id="rpU-Wb-IOq"/>
+                                    <outlet property="delegate" destination="GZd-9D-bhb" id="mTT-rR-Oj6"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oeR-CE-QgC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oeR-CE-QgC" firstAttribute="trailing" secondItem="hQc-w9-13d" secondAttribute="trailing" id="662-PS-3so"/>
+                            <constraint firstItem="oeR-CE-QgC" firstAttribute="bottom" secondItem="hQc-w9-13d" secondAttribute="bottom" id="aOG-64-57H"/>
+                            <constraint firstItem="hQc-w9-13d" firstAttribute="top" secondItem="oeR-CE-QgC" secondAttribute="top" id="iTQ-9w-V5i"/>
+                            <constraint firstItem="hQc-w9-13d" firstAttribute="leading" secondItem="oeR-CE-QgC" secondAttribute="leading" id="rWj-sZ-33o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="itemCollectionView" destination="hQc-w9-13d" id="iUG-g4-Zvg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aPs-hD-2pJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5062.3188405797109" y="-283.25892857142856"/>
+        </scene>
         <!--Cart-->
         <scene sceneID="TyR-3d-I1S">
             <objects>
@@ -826,6 +895,7 @@
     <resources>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="chairicon" width="25" height="25"/>
+        <image name="folder.fill.badge.minus" catalog="system" width="128" height="91"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="icons8-coffee-table-50" width="25" height="25"/>
         <image name="icons8-dressing-table-50" width="25" height="25"/>
@@ -843,6 +913,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
