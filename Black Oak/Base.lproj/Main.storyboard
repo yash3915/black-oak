@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b4U-U3-X0y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xzy-l4-fAb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -505,6 +505,72 @@
             </objects>
             <point key="canvasLocation" x="5437.68115942029" y="-992.41071428571422"/>
         </scene>
+        <!--Selected Item View Controller-->
+        <scene sceneID="py0-uK-W73">
+            <objects>
+                <viewController storyboardIdentifier="SelectedItemViewController" id="j4B-vV-kBD" customClass="SelectedItemViewController" customModule="Black_Oak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vxx-zW-ULa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chair1" translatesAutoresizingMaskIntoConstraints="NO" id="CDK-OD-19M">
+                                <rect key="frame" x="20" y="108" width="374" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="7iZ-6Y-h0w"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meR-Ya-xgE">
+                                <rect key="frame" x="20" y="801" width="123" height="31"/>
+                                <color key="backgroundColor" red="0.1843137443" green="0.2823529541" blue="0.36470589040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title="  Add to cart">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WS2-f7-hlK">
+                                <rect key="frame" x="20" y="448" width="374" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="325" id="QV5-qS-rAb"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rs : 2000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5R-HP-QjC">
+                                <rect key="frame" x="20" y="433" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1843137443" green="0.2823529541" blue="0.36470589040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4s-Sn-ASq">
+                                <rect key="frame" x="276.5" y="801" width="117.5" height="31"/>
+                                <color key="backgroundColor" red="0.1843137443" green="0.2823529541" blue="0.36470589040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="cart.fill" catalog="system" title="   Buy Now">
+                                    <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jgk-jA-Ncl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CDK-OD-19M" firstAttribute="top" secondItem="jgk-jA-Ncl" secondAttribute="top" constant="20" id="0Po-x3-XnS"/>
+                            <constraint firstItem="jgk-jA-Ncl" firstAttribute="trailing" secondItem="WS2-f7-hlK" secondAttribute="trailing" constant="20" id="M0O-V0-A8k"/>
+                            <constraint firstItem="B5R-HP-QjC" firstAttribute="leading" secondItem="jgk-jA-Ncl" secondAttribute="leading" constant="20" id="M4s-1v-2VT"/>
+                            <constraint firstItem="jgk-jA-Ncl" firstAttribute="bottom" secondItem="X4s-Sn-ASq" secondAttribute="bottom" constant="30" id="PBG-lk-HtX"/>
+                            <constraint firstItem="jgk-jA-Ncl" firstAttribute="trailing" secondItem="X4s-Sn-ASq" secondAttribute="trailing" constant="20" id="SeM-qh-KCY"/>
+                            <constraint firstItem="jgk-jA-Ncl" firstAttribute="bottom" secondItem="meR-Ya-xgE" secondAttribute="bottom" constant="30" id="f7f-uR-cxc"/>
+                            <constraint firstItem="B5R-HP-QjC" firstAttribute="top" secondItem="CDK-OD-19M" secondAttribute="bottom" constant="25" id="lmC-aB-B9R"/>
+                            <constraint firstItem="CDK-OD-19M" firstAttribute="leading" secondItem="jgk-jA-Ncl" secondAttribute="leading" constant="20" id="pDp-MF-xt9"/>
+                            <constraint firstItem="meR-Ya-xgE" firstAttribute="leading" secondItem="jgk-jA-Ncl" secondAttribute="leading" constant="20" id="rYE-bF-JgU"/>
+                            <constraint firstItem="jgk-jA-Ncl" firstAttribute="trailing" secondItem="CDK-OD-19M" secondAttribute="trailing" constant="20" id="riJ-9k-WAp"/>
+                            <constraint firstItem="WS2-f7-hlK" firstAttribute="top" secondItem="CDK-OD-19M" secondAttribute="bottom" constant="40" id="vhe-8q-vGn"/>
+                            <constraint firstItem="WS2-f7-hlK" firstAttribute="leading" secondItem="jgk-jA-Ncl" secondAttribute="leading" constant="20" id="y0q-fs-6Bz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jOr-5w-MAr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mu8-1j-nHp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7489.8550724637689" y="-816.29464285714278"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ISU-NA-JSn">
             <objects>
@@ -914,6 +980,24 @@
             </objects>
             <point key="canvasLocation" x="4691" y="-289"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="tbT-lL-DKv">
+            <objects>
+                <navigationController title="Item" automaticallyAdjustsScrollViewInsets="NO" id="MB4-rr-rUO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="myV-Ln-Mqk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="j4B-vV-kBD" kind="relationship" relationship="rootViewController" id="2fY-RZ-0rK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4LD-v3-uDb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6579.7101449275369" y="-816.29464285714278"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="pK7-aB-faV"/>
@@ -922,6 +1006,7 @@
     <color key="tintColor" red="0.1843137443" green="0.2823529541" blue="0.36470589040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="chair1" width="5304" height="6630"/>
         <image name="chairicon" width="25" height="25"/>
         <image name="folder.fill.badge.minus" catalog="system" width="128" height="91"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
@@ -932,6 +1017,7 @@
         <image name="icons8-table-50" width="25" height="25"/>
         <image name="icons8-table-lights-50" width="25" height="25"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="profileBackgroundImage" width="516" height="491"/>
         <image name="profileDataBackground" width="345" height="493"/>
         <image name="profileImage" width="90" height="90"/>
