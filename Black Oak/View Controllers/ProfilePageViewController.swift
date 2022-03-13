@@ -7,29 +7,28 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class ProfilePageViewController: UIViewController {
 
     override func viewDidLoad() {
-       
         super.viewDidLoad()
+        emailLable.text = Auth.auth().currentUser?.email ?? "Not Found"
         
-        
-
-        // Do any additional setup after loading the view.
     }
     
     
     
     @IBOutlet weak var emailLable: UILabel!
     
-    
-    
-    
-    @IBAction func logOutButtonTapped(_ sender: Any) {
-        
-        gotoLoginvc()
-        
+      @IBAction func logOutButtonTapped(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            gotoLoginvc()
+        } catch  {
+            print(error)
+            //Show error
+        }
     }
     
     func gotoLoginvc(){

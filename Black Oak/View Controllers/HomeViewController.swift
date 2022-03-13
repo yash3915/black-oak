@@ -11,7 +11,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var homeTableView:UITableView!
 
-    var menus = [Menu(name: "Sofa", image: "Sofa", id: "sofa")]
+    var menus = [Menu(name: "Sofa", image: "Sofa", id: "sofa", category: .Sofa),
+                 Menu(name: "Chair", image: "Chair", id: "chair", category: .Chair),
+                 Menu(name: "Table", image: "Table", id: "table", category: .Table)]
+    
     var tableSections = [Section]()
     
     
@@ -20,7 +23,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         getProducts()
-        tableSections = [Section(type: "menu", id: "menu_id", items: 1), Section(type: "section", id: "category_item_id", items: products.count)]
+        tableSections = [Section(type: "menu", id: "menu_id", items: 1), Section(type: "section", id: "category_item_id", items: menus.count)]
         // Do any additional setup after loading the view.
     }
     
@@ -61,13 +64,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //action
-        print("Tapped")
         tableView.deselectRow(at: indexPath, animated: true)
         DispatchQueue.main.async {
             let itemsVC = self.storyboard?.instantiateViewController(identifier: "ItemsViewController") as! ItemsViewController
-            UIApplication.shared.windows.first?.rootViewController = itemsVC
-            UIApplication.shared.windows.first?.makeKeyAndVisible()
+            itemsVC.categoryType = self.menus[indexPath.row].category
+            self.navigationController?.pushViewController(itemsVC, animated: true)
         }
     }
 

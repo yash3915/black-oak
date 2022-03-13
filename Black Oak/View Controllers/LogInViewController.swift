@@ -64,7 +64,6 @@ class LogInViewController: UIViewController {
         let password = passwordTextField.text ?? ""
         self.errorLable.alpha = 0
 
-        
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             
             if error != nil{

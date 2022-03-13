@@ -7,9 +7,9 @@
 
 import Foundation
 
-
 struct Menu {
     var name: String
     var image:String
     var id: String
+    var category: CategoryType
 }
