@@ -18,8 +18,14 @@ class ProfilePageViewController: UIViewController {
     }
     
     
-    
     @IBOutlet weak var emailLable: UILabel!
+    
+    
+    @IBAction func passwordReset(_ sender: Any) {
+        
+        gotorstpswdnvc()
+        
+    }
     
       @IBAction func logOutButtonTapped(_ sender: Any) {
         do {
@@ -31,11 +37,21 @@ class ProfilePageViewController: UIViewController {
         }
     }
     
+    
     func gotoLoginvc(){
         
         DispatchQueue.main.async {
             let loginVC = self.storyboard?.instantiateViewController(identifier: "LogInViewController") as! LogInViewController
             UIApplication.shared.windows.first?.rootViewController = loginVC
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+        }
+    }
+    
+    func gotorstpswdnvc(){
+        
+        DispatchQueue.main.async {
+            let pswdVC = self.storyboard?.instantiateViewController(identifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
+            UIApplication.shared.windows.first?.rootViewController = pswdVC
             UIApplication.shared.windows.first?.makeKeyAndVisible()
         }
     }

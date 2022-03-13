@@ -53,7 +53,7 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         
     //space between rows top and bottom rows
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 2
+        return 8
     }
     
     //Space between cells in same row
