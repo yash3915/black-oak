@@ -64,6 +64,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         //action
         print("Tapped")
         tableView.deselectRow(at: indexPath, animated: true)
+        DispatchQueue.main.async {
+            let itemsVC = self.storyboard?.instantiateViewController(identifier: "ItemsViewController") as! ItemsViewController
+            UIApplication.shared.windows.first?.rootViewController = itemsVC
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+        }
     }
 
     /*

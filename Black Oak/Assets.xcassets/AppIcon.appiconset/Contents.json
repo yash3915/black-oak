@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "Screenshot 2022-03-04 at 5.07.22 PM.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
@@ -32,6 +31,7 @@
       "size" : "40x40"
     },
     {
+      "filename" : "Black-Oak-1.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"

@@ -18,7 +18,7 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        1
+        2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -33,7 +33,7 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width / 2 - 5, height: collectionView.bounds.width / 3 - 5)
+        return CGSize(width: collectionView.bounds.width / 1 - 5, height: collectionView.bounds.width / 3 - 5)
     }
         
     //space between rows top and bottom rows
