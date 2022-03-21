@@ -1,34 +1,19 @@
 //
-//  SelectedItemViewController.swift
+//  PaymentPgaeViewController.swift
 //  Black Oak
 //
-//  Created by Yash Patel on 13/03/22.
+//  Created by Yash Patel on 14/03/22.
 //
 
 import UIKit
 
-class SelectedItemViewController: UIViewController {
-    
-    var mainImage:UIImage!
-    var mainLbl:String!
-    var mainPrice:Float!
-    
-    @IBOutlet weak var itemImage: UIImageView!
-    
-    @IBOutlet weak var itemLbl: UILabel!
+class PaymentPgaeViewController: UIViewController {
 
-    @IBOutlet weak var itemPrice: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        itemImage.image=mainImage
-        itemLbl.text=mainLbl
-        itemPrice.text=mainPrice
 
         // Do any additional setup after loading the view.
     }
-    
     
 
     /*

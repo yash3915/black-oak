@@ -23,7 +23,7 @@ class ProfilePageViewController: UIViewController {
     
     @IBAction func passwordReset(_ sender: Any) {
         
-        gotorstpswdnvc()
+//        gotorstpswdnvc()
         
     }
     

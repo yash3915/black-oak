@@ -61,6 +61,15 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         return 2
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let itemSelect:SelectedItemViewController = self.storyboard?.instantiateViewController(withIdentifier: "SelectedItemViewController") as! SelectedItemViewController
+        
+        self.navigationController?.pushViewController(itemSelect, animated: true)
+        
+        itemSelect.mainImage = products.
+    }
+    
 }
 
 
