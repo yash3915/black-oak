@@ -6,39 +6,28 @@
 //
 
 import UIKit
+import SDWebImage
 
 class SelectedItemViewController: UIViewController {
     
-    var mainImage:UIImage!
-    var mainLbl:String!
-    var mainPrice:Float!
+    var product: Product?
     
     @IBOutlet weak var itemImage: UIImageView!
-    
     @IBOutlet weak var itemLbl: UILabel!
-
     @IBOutlet weak var itemPrice: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        itemImage.image=mainImage
-        itemLbl.text=mainLbl
-        itemPrice.text=mainPrice
-
-        // Do any additional setup after loading the view.
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if (self.product != nil) && (self.product?.imageLink != nil) {
+            self.itemImage.sd_setImage(with: URL(string: self.product!.imageLink), completed: nil)
+        }
+        self.title = product?.name
+        itemLbl.text = product?.name
+        itemPrice.text = String(product?.price ?? 0)
     }
-    */
 
 }

@@ -23,10 +23,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Choose Your Best Furniture!"
+
         getProducts()
         tableSections = [Section(type: "menu", id: "menu_id", items: 1), Section(type: "section", id: "category_item_id", items: menus.count)]
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
     
     func getProducts(){
         products = Product.getList()

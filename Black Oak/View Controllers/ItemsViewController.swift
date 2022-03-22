@@ -21,11 +21,6 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         products = Product.getList().filter({ $0.category == self.categoryType });
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -67,7 +62,7 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         self.navigationController?.pushViewController(itemSelect, animated: true)
         
-        itemSelect.mainImage = products.
+        itemSelect.product = products[indexPath.row]
     }
     
 }
