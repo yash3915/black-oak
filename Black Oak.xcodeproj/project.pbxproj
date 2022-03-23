@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5D1DEFE327A50FFB00615C7E /* NextPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DEFE227A50FFB00615C7E /* NextPageViewController.swift */; };
-		5D4C4A5627DF1C06003E87BF /* PaymentPgaeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4C4A5527DF1C06003E87BF /* PaymentPgaeViewController.swift */; };
+		5D1FB55927EAF41B004C803C /* PaymentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1FB55827EAF41B004C803C /* PaymentPageViewController.swift */; };
+		5D1FB56127EAFFBD004C803C /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1FB56027EAFFBD004C803C /* Animation.swift */; };
 		5D5CF1D027A6CA2800A06925 /* MenuItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CF1CF27A6CA2800A06925 /* MenuItemsCell.swift */; };
 		5D5CF1D327A6CD6F00A06925 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CF1D227A6CD6F00A06925 /* Menu.swift */; };
 		5D5CF1D527A6CD8300A06925 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CF1D427A6CD8300A06925 /* Section.swift */; };
@@ -37,7 +38,8 @@
 /* Begin PBXFileReference section */
 		0CC5E89FB91B5ACCD6EB0451 /* Pods_Black_Oak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Black_Oak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1DEFE227A50FFB00615C7E /* NextPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPageViewController.swift; sourceTree = "<group>"; };
-		5D4C4A5527DF1C06003E87BF /* PaymentPgaeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPgaeViewController.swift; sourceTree = "<group>"; };
+		5D1FB55827EAF41B004C803C /* PaymentPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPageViewController.swift; sourceTree = "<group>"; };
+		5D1FB56027EAFFBD004C803C /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		5D5CF1CF27A6CA2800A06925 /* MenuItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsCell.swift; sourceTree = "<group>"; };
 		5D5CF1D227A6CD6F00A06925 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		5D5CF1D427A6CD8300A06925 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				5D5CF1D227A6CD6F00A06925 /* Menu.swift */,
 				8416CFD827BBD44E0095240A /* Product.swift */,
 				5D5CF1D427A6CD8300A06925 /* Section.swift */,
+				5D1FB56027EAFFBD004C803C /* Animation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,7 +151,7 @@
 				5D7DCD2E27BE2D1D00A4F34F /* ProfilePageViewController.swift */,
 				5D9E4F4C27DE19F20012CD21 /* SelectedItemViewController.swift */,
 				5DB85D9B27DE7984004CAE43 /* cartViewController.swift */,
-				5D4C4A5527DF1C06003E87BF /* PaymentPgaeViewController.swift */,
+				5D1FB55827EAF41B004C803C /* PaymentPageViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -282,11 +285,11 @@
 				5DDA9E7B2711671200938A30 /* ViewController.swift in Sources */,
 				5D1DEFE327A50FFB00615C7E /* NextPageViewController.swift in Sources */,
 				5DD22A4D27117957003F61B2 /* Utilities.swift in Sources */,
+				5D1FB55927EAF41B004C803C /* PaymentPageViewController.swift in Sources */,
 				84BF5D9627D3BD7800D8CDB2 /* ItemsViewController.swift in Sources */,
 				5D5CF1D327A6CD6F00A06925 /* Menu.swift in Sources */,
 				5DDA9E772711671200938A30 /* AppDelegate.swift in Sources */,
 				5DDA9E792711671200938A30 /* SceneDelegate.swift in Sources */,
-				5D4C4A5627DF1C06003E87BF /* PaymentPgaeViewController.swift in Sources */,
 				5D6834AD27BCD31B00269FA6 /* ForgotPasswordViewController.swift in Sources */,
 				5DDA9E912711678100938A30 /* LogInViewController.swift in Sources */,
 				5D9E4F4D27DE19F20012CD21 /* SelectedItemViewController.swift in Sources */,
@@ -295,6 +298,7 @@
 				5DB85D9C27DE7984004CAE43 /* cartViewController.swift in Sources */,
 				5DDA9E8F2711677A00938A30 /* HomeViewController.swift in Sources */,
 				5DD22A4E27117957003F61B2 /* Constants.swift in Sources */,
+				5D1FB56127EAFFBD004C803C /* Animation.swift in Sources */,
 				8416CFD927BBD44E0095240A /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

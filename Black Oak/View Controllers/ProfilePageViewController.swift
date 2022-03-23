@@ -11,9 +11,12 @@ import FirebaseAuth
 
 class ProfilePageViewController: UIViewController {
 
+    @IBOutlet weak var signOut: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         emailLable.text = Auth.auth().currentUser?.email ?? "Not Found"
+        signOut.layer.cornerRadius = 6
+
         
     }
     
@@ -23,7 +26,7 @@ class ProfilePageViewController: UIViewController {
     
     @IBAction func passwordReset(_ sender: Any) {
         
-//        gotorstpswdnvc()
+        gotorstpswdnvc()
         
     }
     
@@ -50,9 +53,9 @@ class ProfilePageViewController: UIViewController {
     func gotorstpswdnvc(){
         
         DispatchQueue.main.async {
-            let pswdVC = self.storyboard?.instantiateViewController(identifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
-            UIApplication.shared.windows.first?.rootViewController = pswdVC
-            UIApplication.shared.windows.first?.makeKeyAndVisible()
+            let resetPswd:ForgotPasswordViewController = self.storyboard?.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
+            
+            self.navigationController?.pushViewController(resetPswd, animated: true)
         }
     }
     

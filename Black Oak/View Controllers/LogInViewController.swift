@@ -58,6 +58,14 @@ class LogInViewController: UIViewController {
         
     }
     
+    @IBAction func forgotTapped(_ sender: Any) {
+    
+        let resetPswd:ForgotPasswordViewController = self.storyboard?.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
+        
+        self.navigationController?.pushViewController(resetPswd, animated: true)
+        
+    }
+    
     @IBAction func loginTapped(_ sender: Any) {
         
         let email = (emailTextField.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)

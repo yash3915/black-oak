@@ -16,9 +16,16 @@ class SelectedItemViewController: UIViewController {
     @IBOutlet weak var itemLbl: UILabel!
     @IBOutlet weak var itemPrice: UILabel!
     
+    @IBOutlet weak var addToCart: UIButton!
+    @IBOutlet weak var buyNow: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addToCart.layer.cornerRadius = 6
+        buyNow.layer.cornerRadius = 6
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -27,7 +34,23 @@ class SelectedItemViewController: UIViewController {
         }
         self.title = product?.name
         itemLbl.text = product?.name
-        itemPrice.text = String(product?.price ?? 0)
-    }
+        itemPrice.text = "₹ \(String(product?.price ?? 0))"
+        
 
+    }
+    
+    @IBAction func addToCartTapped(_ sender: UIButton) {
+        
+        let cartPage:cartViewController = self.storyboard?.instantiateViewController(withIdentifier: "cartViewController") as! cartViewController
+        
+        self.navigationController?.pushViewController(cartPage, animated: true)
+        
+    }
+    @IBAction func buyNowTapped(_ sender: Any) {
+        
+        let paymentPgae:PaymentPageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PaymentPageViewController") as! PaymentPageViewController
+        
+        self.navigationController?.pushViewController(paymentPgae, animated: true)
+     
+    }
 }

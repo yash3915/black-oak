@@ -13,7 +13,7 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     @IBOutlet weak var itemCollectionView: UICollectionView!
     
-    var categoryType: CategoryType = .Sofa
+    var categoryType: CategoryType = .Chair
     var products = [Product]()
     
     override func viewDidLoad() {
