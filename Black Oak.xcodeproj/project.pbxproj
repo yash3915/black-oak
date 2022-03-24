@@ -10,6 +10,7 @@
 		5D1DEFE327A50FFB00615C7E /* NextPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DEFE227A50FFB00615C7E /* NextPageViewController.swift */; };
 		5D1FB55927EAF41B004C803C /* PaymentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1FB55827EAF41B004C803C /* PaymentPageViewController.swift */; };
 		5D1FB56127EAFFBD004C803C /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1FB56027EAFFBD004C803C /* Animation.swift */; };
+		5D4B217327ECAA8100C08470 /* PlaceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B217227ECAA8100C08470 /* PlaceOrderViewController.swift */; };
 		5D5CF1D027A6CA2800A06925 /* MenuItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CF1CF27A6CA2800A06925 /* MenuItemsCell.swift */; };
 		5D5CF1D327A6CD6F00A06925 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CF1D227A6CD6F00A06925 /* Menu.swift */; };
 		5D5CF1D527A6CD8300A06925 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CF1D427A6CD8300A06925 /* Section.swift */; };
@@ -40,6 +41,7 @@
 		5D1DEFE227A50FFB00615C7E /* NextPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPageViewController.swift; sourceTree = "<group>"; };
 		5D1FB55827EAF41B004C803C /* PaymentPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPageViewController.swift; sourceTree = "<group>"; };
 		5D1FB56027EAFFBD004C803C /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		5D4B217227ECAA8100C08470 /* PlaceOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderViewController.swift; sourceTree = "<group>"; };
 		5D5CF1CF27A6CA2800A06925 /* MenuItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsCell.swift; sourceTree = "<group>"; };
 		5D5CF1D227A6CD6F00A06925 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		5D5CF1D427A6CD8300A06925 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				5D9E4F4C27DE19F20012CD21 /* SelectedItemViewController.swift */,
 				5DB85D9B27DE7984004CAE43 /* cartViewController.swift */,
 				5D1FB55827EAF41B004C803C /* PaymentPageViewController.swift */,
+				5D4B217227ECAA8100C08470 /* PlaceOrderViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				5D1FB55927EAF41B004C803C /* PaymentPageViewController.swift in Sources */,
 				84BF5D9627D3BD7800D8CDB2 /* ItemsViewController.swift in Sources */,
 				5D5CF1D327A6CD6F00A06925 /* Menu.swift in Sources */,
+				5D4B217327ECAA8100C08470 /* PlaceOrderViewController.swift in Sources */,
 				5DDA9E772711671200938A30 /* AppDelegate.swift in Sources */,
 				5DDA9E792711671200938A30 /* SceneDelegate.swift in Sources */,
 				5D6834AD27BCD31B00269FA6 /* ForgotPasswordViewController.swift in Sources */,

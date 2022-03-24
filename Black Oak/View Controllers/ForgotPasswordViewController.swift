@@ -18,10 +18,13 @@ class ForgotPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        UINavigationBar.appearance().barTintColor = UIColor.whiteColor
+
 
         sendMail.layer.cornerRadius = 6
 
-        
+            
         setUpElements()
         // Do any additional setup after loading the view.
     }

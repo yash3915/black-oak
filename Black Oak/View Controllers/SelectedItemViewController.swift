@@ -48,9 +48,9 @@ class SelectedItemViewController: UIViewController {
     }
     @IBAction func buyNowTapped(_ sender: Any) {
         
-        let paymentPgae:PaymentPageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PaymentPageViewController") as! PaymentPageViewController
+        let placeOrder:PlaceOrderViewController = self.storyboard?.instantiateViewController(withIdentifier: "PlaceOrderViewController") as! PlaceOrderViewController
         
-        self.navigationController?.pushViewController(paymentPgae, animated: true)
+        self.navigationController?.pushViewController(placeOrder, animated: true)
      
     }
 }
