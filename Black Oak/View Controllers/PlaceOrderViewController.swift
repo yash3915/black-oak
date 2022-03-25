@@ -9,32 +9,6 @@ import UIKit
 
 class PlaceOrderViewController: UIViewController{
 
-    
-   
-    
-    
-//    @IBOutlet weak var itemImageTf: UIImageView!
-//
-//    @IBOutlet weak var itemPriceTf: UILabel!
-//
-//    @IBOutlet weak var itemNameTf: UILabel!
-//
-//    @IBOutlet weak var contactNumberTf: UITextField!
-//
-//    @IBOutlet weak var postalCodeTf: UITextField!
-//
-//    @IBOutlet weak var cardNumberTf: UITextField!
-//
-//    @IBOutlet weak var expiryMonthTf: UITextField!
-//
-//    @IBOutlet weak var expiryYearTf: UITextField!
-//
-//    @IBOutlet weak var cvvTf: UITextField!
-//
-//    @IBOutlet weak var errorLable: UILabel!
-//
-//    @IBOutlet weak var buyNowButton: UIButton!
-    
     @IBOutlet weak var itemImage: UIImageView!
     
     @IBOutlet weak var itemPrice: UILabel!
@@ -72,6 +46,8 @@ class PlaceOrderViewController: UIViewController{
     
     @IBAction func buyNowTapped(_ sender: Any) {
         
+        errorLable.alpha = 1
+        
         showError(nil, false)
 
         let contact = (contactNumberTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -87,19 +63,14 @@ class PlaceOrderViewController: UIViewController{
             showError(error!, true)
             return
         }
-        else{            print("Done")
+        else{
 
-            gotoBuySuccessful()
+            let sucess:PaymentPageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PaymentPageViewController") as! PaymentPageViewController
+            
+            self.navigationController?.pushViewController(sucess, animated: true)
+            
         }
     
-    }
-    
-    func gotoBuySuccessful()
-    {
-        let sucess:PaymentPageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PaymentPageViewController") as! PaymentPageViewController
-        
-        self.navigationController?.pushViewController(sucess, animated: true)
-        
     }
     
     func validateFields(_ contact:String, _ postal:String,_ cardNo:String,_ expiryMonth:String,_ expiryYear:String,_ cvv:String) -> String? {

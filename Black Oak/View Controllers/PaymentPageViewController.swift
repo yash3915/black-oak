@@ -9,9 +9,14 @@ import UIKit
 
 class PaymentPageViewController: UIViewController {
 
+    @IBOutlet weak var gotoOrdersButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        gotoOrdersButton.layer.cornerRadius = 6
+
+        
         // Do any additional setup after loading the view.
     }
     
