@@ -9,6 +9,8 @@ pod 'Firebase/Auth'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 
+pod 'Frames', '~> 3'
+
 pod 'SDWebImage/WebP'
 pod 'IQKeyboardManagerSwift'
 pod 'NVActivityIndicatorView'

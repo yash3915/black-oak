@@ -344,6 +344,7 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.7):
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
+  - CheckoutEventLoggerKit (1.1.1)
   - Firebase/Analytics (8.6.1):
     - Firebase/Core
   - Firebase/Auth (8.6.1):
@@ -407,6 +408,9 @@ PODS:
     - GoogleUtilities/Environment (~> 7.4)
     - GoogleUtilities/UserDefaults (~> 7.4)
     - PromisesObjC (< 3.0, >= 1.2)
+  - Frames (3.5.2):
+    - CheckoutEventLoggerKit (= 1.1.1)
+    - PhoneNumberKit (= 3.3.3)
   - GoogleAppMeasurement (8.6.0):
     - GoogleAppMeasurement/AdIdSupport (= 8.6.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
@@ -487,6 +491,12 @@ PODS:
   - NVActivityIndicatorView (5.1.1):
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
+  - PhoneNumberKit (3.3.3):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.3.3)
+    - PhoneNumberKit/UIKit (= 3.3.3)
+  - PhoneNumberKit/PhoneNumberKitCore (3.3.3)
+  - PhoneNumberKit/UIKit (3.3.3):
+    - PhoneNumberKit/PhoneNumberKitCore
   - PromisesObjC (2.0.0)
   - SDWebImage/Core (4.4.8)
   - SDWebImage/WebP (4.4.8):
@@ -498,6 +508,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - Frames (~> 3)
   - IQKeyboardManagerSwift
   - NVActivityIndicatorView
   - SDWebImage/WebP
@@ -506,6 +517,7 @@ SPEC REPOS:
   trunk:
     - abseil
     - BoringSSL-GRPC
+    - CheckoutEventLoggerKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -513,6 +525,7 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseFirestore
     - FirebaseInstallations
+    - Frames
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
@@ -524,12 +537,14 @@ SPEC REPOS:
     - libwebp
     - nanopb
     - NVActivityIndicatorView
+    - PhoneNumberKit
     - PromisesObjC
     - SDWebImage
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
+  CheckoutEventLoggerKit: 18f1afe34ff217c3624396f2c2b4d26db8e6c2d9
   Firebase: e84d95f6d3a91f634abc384f0751c434cb3aecfa
   FirebaseAnalytics: 8f32ae54ad42754f503354782575c4ddfc1425c3
   FirebaseAuth: 223adeeb2262b417532e89bf06a960e3a0a1e9e4
@@ -537,6 +552,7 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 3721920bde3a9a6d5aa093c1d25e9d3e47f694af
   FirebaseFirestore: 7b8bd72aff4d3ad91498343e81fdbaa994ce8abe
   FirebaseInstallations: 0ede6ffcd215b8f93c19d9b06c1c54e2d4107e98
+  Frames: 9090a075bd8fe0fc883e32e380cd09e41c9cc0bc
   GoogleAppMeasurement: 2c0c6e2a7ab3fe730ade6379f732bdefb46f50b0
   GoogleDataTransport: 85fd18ff3019bb85d3f2c551d04c481dedf71fc9
   GoogleUtilities: 8de2a97a17e15b6b98e38e8770e2d129a57c0040
@@ -548,9 +564,10 @@ SPEC CHECKSUMS:
   libwebp: 98a37e597e40bfdb4c911fc98f2c53d0b12d05fc
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  PhoneNumberKit: 4ce83273551c4d2ae10b7361162f4283dd02835f
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
 
-PODFILE CHECKSUM: bcbde23b9af2d65e657f4d6f10cc0a85c5e3662d
+PODFILE CHECKSUM: 84d8f30cc804b28dc967fd803d070ba62ed78f14
 
 COCOAPODS: 1.11.2
