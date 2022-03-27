@@ -9,6 +9,8 @@ import UIKit
 
 class PlaceOrderViewController: UIViewController{
 
+    var product: Product?
+    
     @IBOutlet weak var itemImage: UIImageView!
     
     @IBOutlet weak var itemPrice: UILabel!
@@ -37,6 +39,17 @@ class PlaceOrderViewController: UIViewController{
         super.viewDidLoad()
         showError(nil, false)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if (self.product != nil) && (self.product?.imageLink != nil) {
+            self.itemImage.sd_setImage(with: URL(string: self.product!.imageLink), completed: nil)
+        }
+        self.title = product?.name
+        itemPrice.text = "₹ \(String(product?.price ?? 0))"
+//        itemName.text = product?.name
+
     }
     
     func showError(_ message:String?, _ isShow: Bool){
