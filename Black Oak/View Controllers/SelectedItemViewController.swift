@@ -26,7 +26,6 @@ class SelectedItemViewController: UIViewController {
         buyNow.layer.cornerRadius = 6
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if (self.product != nil) && (self.product?.imageLink != nil) {
@@ -36,8 +35,8 @@ class SelectedItemViewController: UIViewController {
         itemLbl.text = product?.name
         itemPrice.text = "₹ \(String(product?.price ?? 0))"
         
-
     }
+    
     
     @IBAction func addToCartTapped(_ sender: UIButton) {
         
@@ -51,6 +50,8 @@ class SelectedItemViewController: UIViewController {
         let placeOrder:PlaceOrderViewController = self.storyboard?.instantiateViewController(withIdentifier: "PlaceOrderViewController") as! PlaceOrderViewController
         
         self.navigationController?.pushViewController(placeOrder, animated: true)
-     
+        
+        
     }
+    
 }

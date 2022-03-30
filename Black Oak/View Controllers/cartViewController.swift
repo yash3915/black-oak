@@ -6,8 +6,18 @@
 //
 
 import UIKit
+import SDWebImage
 
-class cartViewController: UIViewController {
+class cartViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

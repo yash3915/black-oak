@@ -43,13 +43,12 @@ class PlaceOrderViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        itemPrice.text = "₹ \(String(product?.price ?? 0))"
+        itemName.text = product?.name ?? nil
         if (self.product != nil) && (self.product?.imageLink != nil) {
             self.itemImage.sd_setImage(with: URL(string: self.product!.imageLink), completed: nil)
         }
-        self.title = product?.name
-        itemPrice.text = "₹ \(String(product?.price ?? 0))"
-//        itemName.text = product?.name
-
     }
     
     func showError(_ message:String?, _ isShow: Bool){
