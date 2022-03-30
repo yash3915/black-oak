@@ -39,12 +39,11 @@ class SelectedItemViewController: UIViewController {
     
     
     @IBAction func addToCartTapped(_ sender: UIButton) {
-        
-        let cartPage:cartViewController = self.storyboard?.instantiateViewController(withIdentifier: "cartViewController") as! cartViewController
-        
-        self.navigationController?.pushViewController(cartPage, animated: true)
-        
+        if product {
+            productCart.append(product)
+        }
     }
+    
     @IBAction func buyNowTapped(_ sender: Any) {
         
         let placeOrder:PlaceOrderViewController = self.storyboard?.instantiateViewController(withIdentifier: "PlaceOrderViewController") as! PlaceOrderViewController

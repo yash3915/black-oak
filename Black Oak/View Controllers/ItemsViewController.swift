@@ -59,10 +59,9 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let itemSelect:SelectedItemViewController = self.storyboard?.instantiateViewController(withIdentifier: "SelectedItemViewController") as! SelectedItemViewController
-        
+        itemSelect.product = products[indexPath.row]
         self.navigationController?.pushViewController(itemSelect, animated: true)
         
-        itemSelect.product = products[indexPath.row]
     }
     
 }
