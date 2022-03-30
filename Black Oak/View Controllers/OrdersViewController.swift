@@ -6,24 +6,61 @@
 //
 
 import UIKit
+import SDWebImage
 
-class OrdersViewController: UIViewController {
+var Orderedproduct = [Product]()
+
+class OrdersViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    
+    @IBOutlet var ordersCollectionView: UIView!
+    
+    @IBOutlet weak var orderEmpty: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if(productCart.count>0)
+        {
+            self.orderEmpty.alpha = 0
+
+        }
+        else
+        {
+            self.orderEmpty.alpha = 1
+        }
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return Orderedproduct.count
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CartItemID", for: indexPath) as! CartItemCollectionViewCell
+        cell.product = productCart[indexPath.row]
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width, height: 150)
+    }
+        
+    //space between rows top and bottom rows
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    //Space between cells in same row
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+   
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let itemSelect:SelectedItemViewController = self.storyboard?.instantiateViewController(withIdentifier: "SelectedItemViewController") as! SelectedItemViewController
+        itemSelect.product = productCart[indexPath.row]
+        self.navigationController?.pushViewController(itemSelect, animated: true)
+    }
+    
 }

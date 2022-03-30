@@ -6,16 +6,14 @@
 //
 
 import UIKit
+import SDWebImage
+
 
 class PlaceOrderViewController: UIViewController{
-
+    
     var product: Product?
-    
-    @IBOutlet weak var itemImage: UIImageView!
-    
+        
     @IBOutlet weak var itemPrice: UILabel!
-    
-    @IBOutlet weak var itemName: UILabel!
     
     @IBOutlet weak var contactNumberTf: UITextField!
     
@@ -34,9 +32,11 @@ class PlaceOrderViewController: UIViewController{
     @IBOutlet weak var errorLable: UILabel!
     
     override func viewDidLoad() {
-        buyNowButton.layer.cornerRadius = 8
         
         super.viewDidLoad()
+        
+        buyNowButton.layer.cornerRadius = 8
+
         showError(nil, false)
         // Do any additional setup after loading the view.
     }
@@ -44,11 +44,8 @@ class PlaceOrderViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        itemPrice.text = "₹ \(String(product?.price ?? 0))"
-        itemName.text = product?.name ?? nil
-        if (self.product != nil) && (self.product?.imageLink != nil) {
-            self.itemImage.sd_setImage(with: URL(string: self.product!.imageLink), completed: nil)
-        }
+//        itemPrice.text = productCart.map(itemPrice)
+        
     }
     
     func showError(_ message:String?, _ isShow: Bool){
@@ -80,6 +77,10 @@ class PlaceOrderViewController: UIViewController{
             let sucess:PaymentPageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PaymentPageViewController") as! PaymentPageViewController
             
             self.navigationController?.pushViewController(sucess, animated: true)
+            
+            if (product != nil) {
+                Orderedproduct.append(product!)
+            }
             
         }
     

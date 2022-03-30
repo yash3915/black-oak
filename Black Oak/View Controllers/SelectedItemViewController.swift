@@ -17,13 +17,11 @@ class SelectedItemViewController: UIViewController {
     @IBOutlet weak var itemPrice: UILabel!
     
     @IBOutlet weak var addToCart: UIButton!
-    @IBOutlet weak var buyNow: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addToCart.layer.cornerRadius = 6
-        buyNow.layer.cornerRadius = 6
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,18 +37,14 @@ class SelectedItemViewController: UIViewController {
     
     
     @IBAction func addToCartTapped(_ sender: UIButton) {
-        if product {
-            productCart.append(product)
+        
+        let addTocart:cartViewController = self.storyboard?.instantiateViewController(withIdentifier: "cartViewController") as! cartViewController
+        
+        self.navigationController?.pushViewController(addTocart , animated: true)
+        
+        if (product != nil) {
+            productCart.append(product!)
         }
-    }
-    
-    @IBAction func buyNowTapped(_ sender: Any) {
-        
-        let placeOrder:PlaceOrderViewController = self.storyboard?.instantiateViewController(withIdentifier: "PlaceOrderViewController") as! PlaceOrderViewController
-        
-        self.navigationController?.pushViewController(placeOrder, animated: true)
-        
-        
     }
     
 }
