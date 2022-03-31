@@ -682,10 +682,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dYG-dZ-9f9" userLabel="Orders">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OrderedItemCollectionViewCell" id="dYG-dZ-9f9" userLabel="orderItemId" customClass="orderItemCollectionViewCell">
                                 <rect key="frame" x="2.5" y="0.0" width="409" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="42r-fI-AZ7" customClass="Order">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="42r-fI-AZ7">
                                     <rect key="frame" x="0.0" y="0.0" width="409" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -719,10 +719,23 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="409" height="200"/>
+                                <connections>
+                                    <outlet property="itemImage" destination="T11-qp-Efp" id="cRB-g1-kDQ"/>
+                                    <outlet property="itemName" destination="uje-Fh-cvt" id="Tm9-oe-3eu"/>
+                                    <outlet property="itemPrice" destination="uje-Fh-cvt" id="cgi-7X-eY6"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="wqX-YX-t6y" id="2mN-P7-Q8k"/>
+                            <outlet property="delegate" destination="wqX-YX-t6y" id="tDj-it-PNz"/>
+                        </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Your Orders !" id="yRz-4p-Dic"/>
+                    <connections>
+                        <outlet property="orderEmpty" destination="z5T-oS-kjd" id="aDt-b5-UdO"/>
+                        <outlet property="ordersCollectionView" destination="7E3-tN-IOO" id="CcK-V2-Tpk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSg-QU-gmk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -825,7 +838,7 @@
                                     <color key="baseForegroundColor" red="0.15151897070000001" green="0.28544479610000001" blue="0.37375432250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="wqX-YX-t6y" kind="push" id="aV0-mh-L3d"/>
+                                    <action selector="gotoOrderTapped:" destination="e0z-tw-Uwb" eventType="touchUpInside" id="jp4-hd-yMe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1046,7 +1059,7 @@
                             </collectionViewCell>
                         </cells>
                         <connections>
-                            <outlet property="dataSource" destination="knQ-AQ-NJ7" id="hsf-DN-tph"/>
+                            <outlet property="dataSource" destination="knQ-AQ-NJ7" id="bHW-xa-V3F"/>
                             <outlet property="delegate" destination="knQ-AQ-NJ7" id="4LN-Dy-Ifj"/>
                         </connections>
                     </collectionView>
@@ -1437,7 +1450,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="pK7-aB-faV"/>
-        <segue reference="aV0-mh-L3d"/>
         <segue reference="ABi-3N-zOb"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.1843137443" green="0.2823529541" blue="0.36470589040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

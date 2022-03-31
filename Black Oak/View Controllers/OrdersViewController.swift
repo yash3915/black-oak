@@ -37,8 +37,8 @@ class OrdersViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CartItemID", for: indexPath) as! CartItemCollectionViewCell
-        cell.product = productCart[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OrderItemId", for: indexPath) as! orderItemCollectionViewCell
+        cell.product = Orderedproduct[indexPath.row]
         return cell
     }
     
@@ -59,8 +59,27 @@ class OrdersViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let itemSelect:SelectedItemViewController = self.storyboard?.instantiateViewController(withIdentifier: "SelectedItemViewController") as! SelectedItemViewController
-        itemSelect.product = productCart[indexPath.row]
+        itemSelect.product = Orderedproduct[indexPath.row]
         self.navigationController?.pushViewController(itemSelect, animated: true)
+    }
+    
+}
+
+class orderItemCollectionViewCell : UICollectionViewCell {
+    
+    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var itemPrice: UILabel!
+    @IBOutlet weak var itemName: UILabel!
+    
+    var product: Product? {
+        didSet {
+            itemName.text = product?.name
+            itemPrice.text = "Rs. \(product?.price ?? 0)"
+            DispatchQueue.main.async {
+                print(self.product!.imageLink)
+                self.itemImage.sd_setImage(with: URL(string: self.product!.imageLink), completed: nil)
+            }
+        }
     }
     
 }

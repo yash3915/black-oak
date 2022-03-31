@@ -32,7 +32,7 @@ class ProfilePageViewController: UIViewController {
     
     @IBAction func orders(_ sender: Any) {
         
-        
+        gotoOrders()
     }
     
       @IBAction func logOutButtonTapped(_ sender: Any) {
@@ -43,6 +43,12 @@ class ProfilePageViewController: UIViewController {
             print(error)
             //Show error
         }
+    }
+    
+    func gotoOrders(){
+        let orders:OrdersViewController = self.storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
+        
+        self.navigationController?.pushViewController(orders, animated: true)
     }
     
     

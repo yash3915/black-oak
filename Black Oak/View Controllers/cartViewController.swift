@@ -21,6 +21,9 @@ class cartViewController: UIViewController, UICollectionViewDelegate, UICollecti
     {
         super.viewDidLoad()
         
+        self.title = "Cart"
+
+        
         if(productCart.count>0)
         {
             self.cartEmptyLbl.alpha = 0
