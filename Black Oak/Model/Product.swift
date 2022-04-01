@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum CategoryType {
+enum CategoryType : String {
     case Sofa
     case Chair
     case Table

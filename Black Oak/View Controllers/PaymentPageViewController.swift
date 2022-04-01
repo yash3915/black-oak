@@ -23,7 +23,6 @@ class PaymentPageViewController: UIViewController {
 
     @IBAction func gotoOrderTapped(_ sender: Any) {
         let gotoOrder:OrdersViewController = self.storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
-        
         self.navigationController?.pushViewController(gotoOrder, animated: true)
     }
     /*

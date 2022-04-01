@@ -34,7 +34,7 @@ class OrdersViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OrderItemId", for: indexPath) as! orderItemCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OrderItemID", for: indexPath) as! orderItemCollectionViewCell
         cell.product = productCart[indexPath.row]
         return cell
     }
@@ -72,10 +72,10 @@ class orderItemCollectionViewCell : UICollectionViewCell {
         didSet {
             itemName.text = product?.name
             itemPrice.text = "Rs. \(product?.price ?? 0)"
-            DispatchQueue.main.async {
-                print(self.product!.imageLink)
-                self.itemImage.sd_setImage(with: URL(string: self.product!.imageLink), completed: nil)
-            }
+//            DispatchQueue.main.async {
+//                print(self.product!.imageLink)
+//                self.itemImage.sd_setImage(with: URL(string: self.product!.imageLink), completed: nil)
+//            }
         }
     }
     

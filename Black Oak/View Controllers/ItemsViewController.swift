@@ -18,6 +18,7 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "\(categoryType.rawValue)"
         products = Product.getList().filter({ $0.category == self.categoryType });
     }
     
