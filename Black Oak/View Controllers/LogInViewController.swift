@@ -53,9 +53,7 @@ class LogInViewController: UIViewController {
     }
     
     func setUpElements(){
-        
-        errorLable.alpha=0
-        
+        errorLable.alpha = 0
     }
     
     @IBAction func forgotTapped(_ sender: Any) {

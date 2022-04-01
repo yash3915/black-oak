@@ -8,12 +8,9 @@
 import UIKit
 import SDWebImage
 
-var Orderedproduct = [Product]()
-
 class OrdersViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    
-    @IBOutlet var ordersCollectionView: UIView!
+    @IBOutlet var ordersCollectionView: UICollectionView!
     
     @IBOutlet weak var orderEmpty: UILabel!
 
@@ -33,12 +30,12 @@ class OrdersViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Orderedproduct.count
+        return productCart.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OrderItemId", for: indexPath) as! orderItemCollectionViewCell
-        cell.product = Orderedproduct[indexPath.row]
+        cell.product = productCart[indexPath.row]
         return cell
     }
     
@@ -59,7 +56,7 @@ class OrdersViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let itemSelect:SelectedItemViewController = self.storyboard?.instantiateViewController(withIdentifier: "SelectedItemViewController") as! SelectedItemViewController
-        itemSelect.product = Orderedproduct[indexPath.row]
+        itemSelect.product = productCart[indexPath.row]
         self.navigationController?.pushViewController(itemSelect, animated: true)
     }
     

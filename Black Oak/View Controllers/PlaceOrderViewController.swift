@@ -11,8 +11,6 @@ import SDWebImage
 
 class PlaceOrderViewController: UIViewController{
     
-    var product: Product?
-        
     @IBOutlet weak var itemPrice: UILabel!
     
     @IBOutlet weak var contactNumberTf: UITextField!
@@ -32,13 +30,10 @@ class PlaceOrderViewController: UIViewController{
     @IBOutlet weak var errorLable: UILabel!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
         buyNowButton.layer.cornerRadius = 8
-
         showError(nil, false)
-        // Do any additional setup after loading the view.
+        itemPrice.text = "\(productCart.map({ Int($0.price) }).reduce(0, +))"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,12 +54,12 @@ class PlaceOrderViewController: UIViewController{
         
         showError(nil, false)
 
-        let contact = (contactNumberTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let postal = (postalCodeTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let cardNo = (cardNumberTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let expiryMonth = (expiryMonthTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let expiryYear = (expiryYearTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let cvv = (cvvTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+//        let contact = (contactNumberTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+//        let postal = (postalCodeTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+//        let cardNo = (cardNumberTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+//        let expiryMonth = (expiryMonthTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+//        let expiryYear = (expiryYearTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+//        let cvv = (cvvTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
         
 //        let error = validateFields(contact,postal,cardNo,expiryMonth,expiryYear,cvv)
 //
@@ -78,12 +73,6 @@ class PlaceOrderViewController: UIViewController{
             
             self.navigationController?.pushViewController(sucess, animated: true)
             
-            if (product != nil) {
-                Orderedproduct.append(product!)
-            }
-            
-//        }
-    
     }
     
     func validateFields(_ contact:String, _ postal:String,_ cardNo:String,_ expiryMonth:String,_ expiryYear:String,_ cvv:String) -> String? {
