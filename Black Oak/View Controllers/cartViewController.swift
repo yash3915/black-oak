@@ -16,42 +16,38 @@ class cartViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet weak var cartEmptyLbl: UILabel!
     
+    
 //
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         self.title = "Cart"
-
         
-        if(productCart.count>0)
-        {
+//        if(productCart.count>0)
+//        {
+//            self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Buy Now", style: .plain, target: self, action: #selector(buyNow(sender:)))
+//        }
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+
+        self.loadView()
+        if(productCart.count>0){
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Buy Now", style: .plain, target: self, action: #selector(buyNow(sender:)))
             self.cartEmptyLbl.alpha = 0
         }
-        else
-        {
-            self.cartEmptyLbl.alpha = 1
-                
-        }
-        
-        if(productCart.count>0)
-        {
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Buy Now", style: .plain, target: self, action: #selector(buyNow(sender:)))
 
-        }
-        
+    }
+
+    @objc func buyNow(sender:UIBarButtonItem) {
             
-        // Do any additional setup after loading the view.
-        }
-        
-        
-        @objc func buyNow(sender:UIBarButtonItem) {
+        let placeOrder:PlaceOrderViewController = self.storyboard?.instantiateViewController(withIdentifier: "PlaceOrderViewController") as! PlaceOrderViewController
             
-            
-            let placeOrder:PlaceOrderViewController = self.storyboard?.instantiateViewController(withIdentifier: "PlaceOrderViewController") as! PlaceOrderViewController
-            
-            self.navigationController?.pushViewController(placeOrder , animated: true)
-        }
+        self.navigationController?.pushViewController(placeOrder , animated: true)
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productCart.count
@@ -80,7 +76,7 @@ class cartViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+
         let itemSelect:SelectedItemViewController = self.storyboard?.instantiateViewController(withIdentifier: "SelectedItemViewController") as! SelectedItemViewController
         itemSelect.product = productCart[indexPath.row]
         self.navigationController?.pushViewController(itemSelect, animated: true)

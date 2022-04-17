@@ -33,7 +33,7 @@ class PlaceOrderViewController: UIViewController{
         super.viewDidLoad()
         buyNowButton.layer.cornerRadius = 8
         showError(nil, false)
-        itemPrice.text = "\(productCart.map({ Int($0.price) }).reduce(0, +))"
+        itemPrice.text = "₹ \(productCart.map({ Int($0.price) }).reduce(0, +))"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,24 +54,26 @@ class PlaceOrderViewController: UIViewController{
         
         showError(nil, false)
 
-//        let contact = (contactNumberTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
-//        let postal = (postalCodeTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
-//        let cardNo = (cardNumberTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
-//        let expiryMonth = (expiryMonthTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
-//        let expiryYear = (expiryYearTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
-//        let cvv = (cvvTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let contact = (contactNumberTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let postal = (postalCodeTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cardNo = (cardNumberTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let expiryMonth = (expiryMonthTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let expiryYear = (expiryYearTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cvv = (cvvTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-//        let error = validateFields(contact,postal,cardNo,expiryMonth,expiryYear,cvv)
-//
-//        if error != nil {
-//            showError(error!, true)
-//            return
-//        }
-//        else{
+        let error = validateFields(contact,postal,cardNo,expiryMonth,expiryYear,cvv)
+
+        if error != nil {
+            showError(error!, true)
+            return
+        }
+        else{
 
             let sucess:PaymentPageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PaymentPageViewController") as! PaymentPageViewController
             
             self.navigationController?.pushViewController(sucess, animated: true)
+            
+        }
             
     }
     
@@ -86,6 +88,8 @@ class PlaceOrderViewController: UIViewController{
 
 
 //        Check the all fields are filled
+        
+        
         if contact.isEmpty{
             return "Please fill contact number field !"
         }
@@ -107,7 +111,7 @@ class PlaceOrderViewController: UIViewController{
         if expiryMonth.isEmpty{
             return "Please fill expiry month field !"
         }
-        if expiryMonth.count != 2 {
+        if expiryMonth.count != 2{
             return "Please enter valid expiry month !"
         }
         if expiryYear.isEmpty {

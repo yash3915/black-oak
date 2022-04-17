@@ -14,7 +14,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var menus = [Menu(name: "Sofa", image: "Sofa", id: "sofa", category: .Sofa),
                  Menu(name: "Chair", image: "Chair", id: "chair", category: .Chair),
                  Menu(name: "Table", image: "Table", id: "table", category: .Table),
-                 Menu(name: "Bed", image: "Bed", id: "bed", category: .Bed)]
+                 Menu(name: "Bed", image: "Bed", id: "bed", category: .Bed),
+                 Menu(name: "Wardrobe", image: "Wardrobe", id: "Wardrobe", category: .Wardrobe),
+                 Menu(name: "Dressingtable", image: "Dressingtable", id: "Dressingtable", category: .Dressingtable)]
     
     var tableSections = [Section]()
     

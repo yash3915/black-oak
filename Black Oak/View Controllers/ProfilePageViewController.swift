@@ -32,7 +32,7 @@ class ProfilePageViewController: UIViewController {
     
     @IBAction func orders(_ sender: Any) {
         
-        gotoOrders()
+//        gotoOrders()
     }
     
       @IBAction func logOutButtonTapped(_ sender: Any) {
