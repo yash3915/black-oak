@@ -8,34 +8,39 @@
 import UIKit
 import SDWebImage
 
+var orderedProduct = [Product]()
+
+
 class OrdersViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet var ordersCollectionView: UICollectionView!
+    @IBOutlet weak var ordersCollectionView: UICollectionView!
     
     @IBOutlet weak var orderEmpty: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Your Orders !"
 
-        if(productCart.count>0)
-        {
-            self.orderEmpty.alpha = 0
-
-        }
-        else
-        {
-            self.orderEmpty.alpha = 1
-        }
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+
+        self.loadView()
+        if(orderedProduct.count>0){
+            self.orderEmpty.alpha = 0
+        }
+
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productCart.count
+        return orderedProduct.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OrderItemID", for: indexPath) as! orderItemCollectionViewCell
-        cell.product = productCart[indexPath.row]
+        cell.product = orderedProduct[indexPath.row]
         return cell
     }
     
@@ -56,7 +61,7 @@ class OrdersViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let itemSelect:SelectedItemViewController = self.storyboard?.instantiateViewController(withIdentifier: "SelectedItemViewController") as! SelectedItemViewController
-        itemSelect.product = productCart[indexPath.row]
+        itemSelect.product = orderedProduct[indexPath.row]
         self.navigationController?.pushViewController(itemSelect, animated: true)
     }
     
@@ -64,18 +69,18 @@ class OrdersViewController: UIViewController, UICollectionViewDelegate, UICollec
 
 class orderItemCollectionViewCell : UICollectionViewCell {
     
-    @IBOutlet weak var itemImage: UIImageView!
-    @IBOutlet weak var itemPrice: UILabel!
-    @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var oItemImage: UIImageView!
+    @IBOutlet weak var oItemName: UILabel!
+    @IBOutlet weak var oItemPrice: UILabel!
     
     var product: Product? {
         didSet {
-            itemName.text = product?.name
-            itemPrice.text = "Rs. \(product?.price ?? 0)"
-//            DispatchQueue.main.async {
-//                print(self.product!.imageLink)
-//                self.itemImage.sd_setImage(with: URL(string: self.product!.imageLink), completed: nil)
-//            }
+            oItemName.text = product?.name
+            oItemPrice.text = "Rs. \(product?.price ?? 0)"
+            DispatchQueue.main.async {
+                print(self.product!.imageLink)
+                self.oItemImage.sd_setImage(with: URL(string: self.product!.imageLink), completed: nil)
+            }
         }
     }
     

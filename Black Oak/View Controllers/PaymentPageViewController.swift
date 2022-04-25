@@ -13,7 +13,7 @@ class PaymentPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gotoOrdersButton.setTitle("Go Home", for: .normal)
+        gotoOrdersButton.setTitle("  Go To Your Orders !", for: .normal)
         gotoOrdersButton.layer.cornerRadius = 6
 
         
@@ -22,9 +22,9 @@ class PaymentPageViewController: UIViewController {
     
 
     @IBAction func gotoOrderTapped(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
-//        let gotoOrder:OrdersViewController = self.storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
-//        self.navigationController?.pushViewController(gotoOrder, animated: true)
+        let yourOrders:OrdersViewController = self.storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
+            
+        self.navigationController?.pushViewController(yourOrders , animated: true)
     }
 
 //    @IBAction func gotoOrderTapped(_ sender: Any) {

@@ -61,19 +61,23 @@ class PlaceOrderViewController: UIViewController{
         let expiryYear = (expiryYearTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
         let cvv = (cvvTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        let error = validateFields(contact,postal,cardNo,expiryMonth,expiryYear,cvv)
-
-        if error != nil {
-            showError(error!, true)
-            return
-        }
-        else{
-
+//        let error = validateFields(contact,postal,cardNo,expiryMonth,expiryYear,cvv)
+//
+//        if error != nil {
+//            showError(error!, true)
+//            return
+//        }
+//        else{
+//
+            orderedProduct = productCart
+            
             let sucess:PaymentPageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PaymentPageViewController") as! PaymentPageViewController
             
             self.navigationController?.pushViewController(sucess, animated: true)
             
-        }
+            productCart.removeAll()
+
+//        }
             
     }
     

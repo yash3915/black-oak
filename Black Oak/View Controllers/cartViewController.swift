@@ -17,18 +17,12 @@ class cartViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var cartEmptyLbl: UILabel!
     
     
-//
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         self.title = "Cart"
-        
-//        if(productCart.count>0)
-//        {
-//            self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Buy Now", style: .plain, target: self, action: #selector(buyNow(sender:)))
-//        }
-        
+                
         // Do any additional setup after loading the view.
     }
     

@@ -658,7 +658,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fXD-Ob-dhx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6278" y="606"/>
+            <point key="canvasLocation" x="6580" y="44"/>
         </scene>
         <!--Your Orders !-->
         <scene sceneID="u4C-aV-xCj">
@@ -682,7 +682,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OrderItemID" id="dYG-dZ-9f9" userLabel="orderItemId" customClass="orderItemCollectionViewCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OrderItemID" id="dYG-dZ-9f9" userLabel="OrderItemID" customClass="orderItemCollectionViewCell">
                                 <rect key="frame" x="2.5" y="0.0" width="409" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="42r-fI-AZ7">
@@ -720,9 +720,9 @@
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="409" height="200"/>
                                 <connections>
-                                    <outlet property="itemImage" destination="T11-qp-Efp" id="Ap5-5N-hWo"/>
-                                    <outlet property="itemName" destination="uje-Fh-cvt" id="Als-tf-9L8"/>
-                                    <outlet property="itemPrice" destination="p8z-gT-izM" id="Nni-bx-zQG"/>
+                                    <outlet property="oItemImage" destination="T11-qp-Efp" id="oPa-dV-4pZ"/>
+                                    <outlet property="oItemName" destination="uje-Fh-cvt" id="E8v-76-22I"/>
+                                    <outlet property="oItemPrice" destination="p8z-gT-izM" id="jme-yH-tDd"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -739,7 +739,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSg-QU-gmk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6971" y="605"/>
+            <point key="canvasLocation" x="7225" y="867"/>
         </scene>
         <!--Selected Item View Controller-->
         <scene sceneID="py0-uK-W73">
@@ -825,10 +825,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7U9-vM-kMy">
-                                <rect key="frame" x="112" y="495.5" width="190" height="50"/>
+                                <rect key="frame" x="97" y="495.5" width="220" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="190" id="LZk-yZ-c5W"/>
+                                    <constraint firstAttribute="width" constant="220" id="LZk-yZ-c5W"/>
                                     <constraint firstAttribute="height" constant="50" id="Nv8-DZ-GLo"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -839,7 +839,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="gotoOrderTapped:" destination="e0z-tw-Uwb" eventType="touchUpInside" id="cwE-P2-eel"/>
-                                    <segue destination="wqX-YX-t6y" kind="push" id="2b1-0C-rdM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -861,7 +860,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uhy-sf-ST0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7671" y="605"/>
+            <point key="canvasLocation" x="7903" y="44"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MsI-Jk-LTt">
@@ -1292,7 +1291,7 @@
                                 <buttonConfiguration key="configuration" style="plain" image="tray.and.arrow.down.fill" catalog="system" title="  Your Orders"/>
                                 <connections>
                                     <action selector="orders:" destination="OMn-J0-BMk" eventType="touchUpInside" id="2G7-Pz-CYF"/>
-                                    <segue destination="wqX-YX-t6y" kind="push" id="7To-T0-cwe"/>
+                                    <segue destination="wqX-YX-t6y" kind="push" id="9sG-4g-gq2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUF-N6-2yo">
@@ -1350,7 +1349,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="OMn-J0-BMk" kind="relationship" relationship="rootViewController" id="6Ra-yO-O8d"/>
+                        <segue destination="OMn-J0-BMk" kind="relationship" relationship="rootViewController" id="5qV-CZ-ueR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JmP-Cr-xjC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1413,7 +1412,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="zvR-96-x1C"/>
-        <segue reference="7To-T0-cwe"/>
         <segue reference="bQ8-MA-SFw"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.1843137443" green="0.2823529541" blue="0.36470589040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
