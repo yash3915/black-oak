@@ -8,7 +8,6 @@
 import UIKit
 import SDWebImage
 
-var productCart = [Product]()
 
 class cartViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     

@@ -7,6 +7,7 @@
 
 import UIKit
 
+//OrderConfirmationVC
 class PaymentPageViewController: UIViewController {
 
     @IBOutlet weak var gotoOrdersButton: UIButton!
@@ -15,14 +16,11 @@ class PaymentPageViewController: UIViewController {
         super.viewDidLoad()
         gotoOrdersButton.setTitle("  Go To Your Orders !", for: .normal)
         gotoOrdersButton.layer.cornerRadius = 6
-
-        
-        // Do any additional setup after loading the view.
     }
     
 
     @IBAction func gotoOrderTapped(_ sender: Any) {
-        let yourOrders:OrdersViewController = self.storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
+        let yourOrders = self.storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
             
         self.navigationController?.pushViewController(yourOrders , animated: true)
     }

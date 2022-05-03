@@ -17,6 +17,16 @@ import FirebaseAuth
         // Override point for customization after application launch.
         FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
+       
+        UINavigationBar.appearance().tintColor = .white
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.titleTextAttributes = [.foregroundColor : UIColor.white]
+        appearance.backgroundColor = UIColor(named: "AccentColor")
+        UINavigationBar.appearance().standardAppearance = appearance;
+        UINavigationBar.appearance().scrollEdgeAppearance = UINavigationBar.appearance().standardAppearance
+        
      
         return true
     }

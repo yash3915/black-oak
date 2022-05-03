@@ -8,8 +8,6 @@
 import UIKit
 import SDWebImage
 
-var orderedProduct = [Product]()
-
 
 class OrdersViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -20,18 +18,17 @@ class OrdersViewController: UIViewController, UICollectionViewDelegate, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Your Orders !"
-
+        self.navigationItem.title = "Your Orders !"
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-
-        self.loadView()
         if(orderedProduct.count>0){
             self.orderEmpty.alpha = 0
+        }else{
+            self.orderEmpty.alpha = 1
         }
-
+        self.ordersCollectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -39,7 +36,7 @@ class OrdersViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OrderItemID", for: indexPath) as! orderItemCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OrderItemID", for: indexPath) as! OrderItemCollectionViewCell
         cell.product = orderedProduct[indexPath.row]
         return cell
     }
@@ -67,7 +64,7 @@ class OrdersViewController: UIViewController, UICollectionViewDelegate, UICollec
     
 }
 
-class orderItemCollectionViewCell : UICollectionViewCell {
+class OrderItemCollectionViewCell : UICollectionViewCell {
     
     @IBOutlet weak var oItemImage: UIImageView!
     @IBOutlet weak var oItemName: UILabel!

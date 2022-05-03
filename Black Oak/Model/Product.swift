@@ -17,6 +17,9 @@ enum CategoryType : String {
     case Dressingtable
 }
 
+var productCart = [Product]()
+var orderedProduct = [Product]()
+
 struct Product {
     var id: Int
     var name: String
