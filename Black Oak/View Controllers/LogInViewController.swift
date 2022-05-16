@@ -83,6 +83,13 @@ class LogInViewController: UIViewController {
         
     }
     
+    @IBAction func signUpPage(_ sender: Any) {
+        let signUp:SignUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        
+        self.navigationController?.pushViewController(signUp, animated: true)
+
+    }
+    
     func gotoHomeScreen()
     {
         

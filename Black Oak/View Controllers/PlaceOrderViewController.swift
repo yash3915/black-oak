@@ -54,21 +54,21 @@ class PlaceOrderViewController: UIViewController{
         
         showError(nil, false)
 
-//        let contact = (contactNumberTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
-//        let postal = (postalCodeTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
-//        let cardNo = (cardNumberTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
-//        let expiryMonth = (expiryMonthTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
-//        let expiryYear = (expiryYearTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
-//        let cvv = (cvvTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let contact = (contactNumberTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let postal = (postalCodeTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cardNo = (cardNumberTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let expiryMonth = (expiryMonthTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let expiryYear = (expiryYearTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cvv = (cvvTf.text ?? "")!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-//        let error = validateFields(contact,postal,cardNo,expiryMonth,expiryYear,cvv)
-//
-//        if error != nil {
-//            showError(error!, true)
-//            return
-//        }
-//        else{
-//
+        let error = validateFields(contact,postal,cardNo,expiryMonth,expiryYear,cvv)
+
+        if error != nil {
+            showError(error!, true)
+            return
+        }
+        else{
+
             orderedProduct = productCart
             
             let sucess:PaymentPageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PaymentPageViewController") as! PaymentPageViewController
@@ -77,7 +77,7 @@ class PlaceOrderViewController: UIViewController{
             
             productCart.removeAll()
 
-//        }
+        }
             
     }
     

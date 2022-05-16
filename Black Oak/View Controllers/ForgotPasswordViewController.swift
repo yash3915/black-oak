@@ -16,6 +16,8 @@ class ForgotPasswordViewController: UIViewController {
     
     @IBOutlet weak var sendMail: UIButton!
     
+    @IBOutlet weak var gotoLogin: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +26,10 @@ class ForgotPasswordViewController: UIViewController {
 
         sendMail.layer.cornerRadius = 6
 
+        if Auth.auth().currentUser != nil  
+        {
+            gotoLogin.alpha=0
+        }
             
         setUpElements()
         // Do any additional setup after loading the view.
@@ -52,5 +58,12 @@ class ForgotPasswordViewController: UIViewController {
                 self.errorLable.alpha = 1
             }
         }
+    }
+    
+    @IBAction func gotoLoginPage(_ sender: Any) {
+        let signIn:LogInViewController = self.storyboard?.instantiateViewController(withIdentifier: "LogInViewController") as! LogInViewController
+        
+        self.navigationController?.pushViewController(signIn, animated: true)
+
     }
 }

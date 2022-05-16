@@ -102,6 +102,13 @@ class SignUpViewController: UIViewController {
         errorLable.alpha = isShow ? 1 : 0
     }
     
+    @IBAction func signInPage(_ sender: Any) {
+        let signIn:LogInViewController = self.storyboard?.instantiateViewController(withIdentifier: "LogInViewController") as! LogInViewController
+        
+        self.navigationController?.pushViewController(signIn, animated: true)
+
+    }
+    
     func gotoHomeScreen()
     {
         DispatchQueue.main.async {

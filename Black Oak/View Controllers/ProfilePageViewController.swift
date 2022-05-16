@@ -37,6 +37,7 @@ class ProfilePageViewController: UIViewController {
     
       @IBAction func logOutButtonTapped(_ sender: Any) {
         do {
+            
             try Auth.auth().signOut()
             gotoLoginvc()
         } catch  {
@@ -44,6 +45,7 @@ class ProfilePageViewController: UIViewController {
             //Show error
         }
     }
+    
     
     func gotoOrders(){
         let orders:OrdersViewController = self.storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
